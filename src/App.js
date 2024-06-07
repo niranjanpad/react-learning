@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import TodoItem from "./components/TodoItem";
+import Button from "./components/Button";
 
-function App() {
+import './style.css';
+import CounterComponent from "./components/CounterComponent";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="todo-container">
+        <Header className="todo-header" title="My First Todo React example"/>
+        <CounterComponent /> 
+      </div>
+      <br></br>
+      <div className="todo-container">
+        <TodoItem activity="Studying"/>
+        <TodoItem activity="sleeping"/>
+        <TodoItem activity="Working"/>
+        <TodoItem activity="Dancing"/>
+        <TodoItem activity="Singing"/>
+        <Button />
+      </div>
     </div>
+
   );
 }
 
